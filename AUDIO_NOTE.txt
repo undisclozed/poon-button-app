@@ -1,0 +1,11 @@
+AUDIO FILE NEEDED:
+- File: poon.mp3
+- Content: Recording of someone saying "POON!" enthusiastically
+- Alternative: Use any celebratory sound effect
+
+For testing, you can:
+1. Record yourself saying "Poon!" on your phone
+2. Convert to MP3
+3. Place in this public/ directory as "poon.mp3"
+
+Or use a free sound effect from freesound.org or similar.
