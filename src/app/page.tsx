@@ -71,7 +71,7 @@ export default function PoonButton() {
             animation: 'bounce 2s ease-out',
           }}
         >
-          <img src="/poon-button-app/tarpon.svg" alt="Tarpon" className="w-full h-full object-contain" />
+          <img src="/poon-button-app/tarpon.png" alt="Tarpon" className="w-full h-full object-contain" />
         </div>
       ))}
 
