@@ -16,7 +16,7 @@ export default function PoonButton() {
   const handlePoonClick = () => {
     // Play sound (will fail gracefully if audio file doesn't exist)
     if (!audioElement) {
-      const audio = new Audio('/poon.mp3');
+      const audio = new Audio('/poon-button-app/poon.mp3');
       audio.play().catch(() => {
         // Fallback: use Web Audio API to create a simple tone
         const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
@@ -62,14 +62,16 @@ export default function PoonButton() {
       {tarpons.map(tarpon => (
         <div
           key={tarpon.id}
-          className="absolute text-6xl animate-bounce"
+          className="absolute animate-bounce"
           style={{
             left: `${tarpon.x}px`,
             top: `${tarpon.y}px`,
+            width: '80px',
+            height: '80px',
             animation: 'bounce 2s ease-out',
           }}
         >
-          🐟
+          <img src="/poon-button-app/tarpon.svg" alt="Tarpon" className="w-full h-full object-contain" />
         </div>
       ))}
 
@@ -81,7 +83,7 @@ export default function PoonButton() {
         
         <button
           onClick={handlePoonClick}
-          className="bg-yellow-400 hover:bg-yellow-500 text-6xl md:text-8xl font-bold py-8 px-16 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200 active:scale-95"
+          className="bg-red-500 hover:bg-red-600 text-6xl md:text-8xl font-bold py-8 px-16 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200 active:scale-95"
         >
           🎣
         </button>
