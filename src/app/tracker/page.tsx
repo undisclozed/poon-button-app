@@ -24,9 +24,9 @@ export default function TarponTracker() {
     const mockCatches: TarponCatch[] = [
       {
         id: 1,
-        fisherman: 'Tim',
-        weight: 125,
-        length: 72,
+        fisherman: 'Tidalwave Tim',
+        weight: 195,
+        length: 75,
         location: 'Boca Grande Pass',
         lat: 26.7153,
         lng: -82.2659,
@@ -34,9 +34,9 @@ export default function TarponTracker() {
       },
       {
         id: 2,
-        fisherman: 'Rick',
-        weight: 98,
-        length: 65,
+        fisherman: 'Saltwater Rick',
+        weight: 185,
+        length: 73,
         location: 'Key West Harbor',
         lat: 24.5551,
         lng: -81.7800,
@@ -44,13 +44,23 @@ export default function TarponTracker() {
       },
       {
         id: 3,
-        fisherman: 'Sarah',
-        weight: 142,
-        length: 78,
+        fisherman: 'Captain Sarah',
+        weight: 245,
+        length: 82,
         location: 'Islamorada Flats',
         lat: 24.9244,
         lng: -80.6278,
         timestamp: new Date(Date.now() - 10800000).toISOString(),
+      },
+      {
+        id: 4,
+        fisherman: 'Big Catch Maggie',
+        weight: 205,
+        length: 78,
+        location: 'Marathon Keys',
+        lat: 24.7166,
+        lng: -81.0362,
+        timestamp: new Date(Date.now() - 5400000).toISOString(),
       },
     ];
 
@@ -59,7 +69,7 @@ export default function TarponTracker() {
 
     // Simulate real-time updates every 30 seconds
     const interval = setInterval(() => {
-      const fishermanNames = ['Tim', 'Rick', 'Sarah'];
+      const fishermanNames = ['Captain Sarah', 'Saltwater Rick', 'Big Catch Maggie', 'Tidalwave Tim'];
       const locations = [
         { name: 'Boca Grande Pass', lat: 26.7153, lng: -82.2659 },
         { name: 'Key West Harbor', lat: 24.5551, lng: -81.7800 },
