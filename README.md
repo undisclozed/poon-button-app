@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐟 Poon Button App
 
-## Getting Started
+**Status**: Ready for deployment and testing  
+**Built**: Feb 10, 2026 07:27 EST  
+**Purpose**: Tarpon fishing tracking and celebration app
 
-First, run the development server:
+## 📱 Features
+
+### Page 1: Poon Button
+- Large interactive button with fish emoji (🎣)
+- Plays "Poon!" sound on tap (with audio fallback)
+- Spawns animated tarpon fish emojis (🐟) at random positions
+- Bounce animations (2-second duration)
+- Mobile-optimized touch interface
+- Link to Live Tracker page
+
+### Page 2: Live Tarpon Tracker
+- **Real-time catch feed** - Updates every 30 seconds with new catches
+- **Live GPS map** - Embedded Google Maps showing Florida Keys fishing locations
+- **Catch details** - Fisherman name, weight, length, location, timestamp
+- **Statistics dashboard**:
+  - Total catches today
+  - Biggest catch (weight)
+  - Average weight
+- **Mobile-responsive** design with card layout
+
+## 🚀 Quick Deploy to Vercel
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx vercel login
+npx vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**That's it!** You'll get a live URL in ~60 seconds.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+poon-button-app/
+├── src/app/
+│   ├── page.tsx          # Poon Button (Page 1)
+│   ├── tracker/
+│   │   └── page.tsx      # Live Tracker (Page 2)
+│   ├── layout.tsx        # App layout & metadata
+│   └── globals.css       # Global styles
+├── public/
+│   ├── AUDIO_NOTE.txt    # Audio file instructions
+│   └── poon.mp3          # (Add your audio here)
+└── package.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎵 Audio Setup (Optional)
 
-## Deploy on Vercel
+The app works with a fallback beep sound. To add custom audio:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Record someone saying "Poon!" enthusiastically
+2. Convert to MP3 format
+3. Save as `public/poon.mp3`
+4. Redeploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Testing Checklist
+
+- [ ] Button spawns fish on tap
+- [ ] Audio plays (or fallback beep works)
+- [ ] Fish animations are smooth
+- [ ] Tracker page loads
+- [ ] Map displays correctly
+- [ ] Catch feed updates
+- [ ] Works on mobile (iOS/Android)
+- [ ] Responsive layout on all screen sizes
+
+## 📊 Tech Stack
+
+- **Framework**: Next.js 14 (React 18)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: Vercel (recommended)
+- **Build**: Static + ISR
+
+## 🌐 API Integration (Future)
+
+Currently uses mock data that simulates real-time updates. To connect to a live API:
+
+1. Create API endpoint for tarpon catches
+2. Update `/tracker/page.tsx` to fetch from your API
+3. Replace mock data with real coordinates
+4. Add WebSocket for true real-time updates (optional)
+
+## 📞 Support
+
+- Build issues? Run `npm run build` to check for errors
+- Deployment issues? See `DEPLOY.md` for multiple deployment methods
+- Need features? This is iteration 1 - built for speed, ready to enhance!
+
+---
+
+**Emergency Recovery Build** - Rebuilt from scratch after wild-harbor crash at 06:27 EST  
+**Deadline**: 7 AM EST (missed, but deployed ASAP for fisherman testing)
